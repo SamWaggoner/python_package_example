@@ -1,6 +1,3 @@
-# NOTE: I used Bing AI to generate this, it will need to be verified that it works
-# and is correct
-
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0  # Use the ref you want to point at
