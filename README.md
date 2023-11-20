@@ -13,17 +13,17 @@ You will need to:
     1. Limits maximal file size.
     1. Runs the black and flake8 linters.
     1. Detect presence of aws credentials private keys.    
-1. Implement the algorithms for bubble, quick and insertion sort, see sort_lib directory,
+2. Implement the algorithms for bubble, quick and insertion sort, see sort_lib directory,
 code should be documented using standard Python practices (there are several [docstring 
 styles](https://stackoverflow.com/questions/3898572/what-is-the-standard-python-docstring-format)
 select one and be consistent).
-1. Implement testing using the [pytest](https://docs.pytest.org/en/6.2.x/) framework, see test directory.
-1. Implement linting, style checking using both [flake8](https://flake8.pycqa.org/en/latest/) and 
+3. Implement testing using the [pytest](https://docs.pytest.org/en/6.2.x/) framework, see test directory.
+4. Implement linting, style checking using both [flake8](https://flake8.pycqa.org/en/latest/) and 
 [black](https://black.readthedocs.io/en/stable/). 
-1. Modify the GitHub actions workflow so that it tests and builds the package for all 
+5. Modify the GitHub actions workflow so that it tests and builds the package for all 
 three operating systems (OSX/Linux/Win) and for Python versions 3.9 and 3.10. Read more about [Distributing Python packages](https://docs.python.org/3/distributing/index.html).
-1. Modify this file to describe this repository and the DevOps workflow you implemented (add badges to this file showing testing status).
-1. **Optional**: Add a job to the workflow which uploads the wheel to [TestPyPI](https://test.pypi.org/). As every package on TestPyPI is required to have a unique name you need to update the UNIQUE_SUFFIX both in the directory name and in the .toml file. Possibly use your team number.
+6. Modify this file to describe this repository and the DevOps workflow you implemented (add badges to this file showing testing status).
+7. **Optional**: Add a job to the workflow which uploads the wheel to [TestPyPI](https://test.pypi.org/). As every package on TestPyPI is required to have a unique name you need to update the UNIQUE_SUFFIX both in the directory name and in the .toml file. Possibly use your team number.
     >**Warning**: Do not upload to the authoritative Python Package Index (PyPI).  
 
 
@@ -32,3 +32,8 @@ Possible work division, three sub-teams:
 1. Implementing testing code, mastering pytest, black, flake8 (tasks 3,4,6).
 1. Understanding pytest, black, flake8 and mastering GitHub workflows (tasks 5,6).
 
+
+
+For testing of the sorting algorithms run: python -m pytest 
+For linting review of the code run python -m flake8 ; 
+To automate linting cleanup with flake 8 and black python -m black .
