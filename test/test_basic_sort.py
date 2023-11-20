@@ -57,14 +57,14 @@ def test_bubble(int_lists):
 
 
 # Test the quick sort algorithm
-def test_quick(int_list):
+def test_quick(int_lists):
     for example in int_lists:
         sorted_list = quick(example.copy())
         assert is_sorted(sorted_list)
 
 
 # Test the insertion sort algorithm
-def test_insertion(int_list):
+def test_insertion(int_lists):
     for example in int_lists:
         sorted_list = insertion(example.copy())
         assert is_sorted(sorted_list)
