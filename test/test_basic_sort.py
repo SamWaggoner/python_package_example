@@ -17,14 +17,9 @@
 # =========================================================================
 import pytest
 import numpy as np
-# from basic_sort_UNIQUE_SUFFIX import *
 from basic_sort_UNIQUE_SUFFIX.int_sort import bubble, quick, insertion
 
 
-from basic_sort_UNIQUE_SUFFIX import bubble, quick, insertion
-
-
-def is_sorted(int_list):
 def is_sorted(int_list):
     """
     Testing oracle.
