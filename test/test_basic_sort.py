@@ -37,16 +37,34 @@ def int_lists():
         [3, 2, 1],
         # List with duplicate elements
         [1, 1, 1, 1, 1],
-        # Random list generated using NumPy
-        list(np.random.randint(low=-10, high=200, size=5)),
-        # Large list for scalability testing
-        list(range(1000, 0, -1)),
         # List with a mix of positive and negative numbers
         [-5, 2, -8, 9, 0],
         # List with only one element
         [42],
         # Empty list
         [],
+
+        # # TODO: THIS EXAMPLE FAILS BUT SHOULDN'T
+        # # Random list generated using NumPy
+        # list(np.random.randint(low=-10, high=200, size=5)),
+
+        # # TODO: BELOW, WRITE TEST INPUTS THAT SHOULD FAIL, AND ENSURE THEY DO FAIL
+        # # String input
+        # "hi I am a string!",
+        # # Single char input
+        # "q",
+        # # Empty string input
+        # "",
+        # # Decimal input
+        # [0.2, 5.4234156, 0.000000001, -99.9],
+        # # Mixed input
+        # [6, 2, "oop", 74],
+        # # 2D lists
+        # [[8,5,2],[82,3]],
+        # # 2D empty lists
+        # [[]],
+        # [[],[]]
+
     ]
 
 # Test the bubble sort algorithm

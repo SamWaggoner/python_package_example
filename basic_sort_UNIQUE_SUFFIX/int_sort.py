@@ -80,7 +80,7 @@ def quick(int_list):
         raise ValueError("ERROR: Input contains non-integer values.")
 
     # base case
-    if len(int_list) == 1:
+    if len(int_list) == 1 or len(int_list) == 0:
         return int_list
 
     # choose a pivot index
