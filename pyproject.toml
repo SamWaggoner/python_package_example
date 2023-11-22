@@ -5,12 +5,14 @@ requires = ["setuptools>=61.0",
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "basic_sort_UNIQUE_SUFFIX"
+name = "basic_sort_3977
 version = "0.0.1"
-authors = [{ name="Author1", email="author1@maine.edu" },
-           { name="Author2", email="author2@maine.edu" },
+authors = [{ name="Sam Waggoner", email="sam.waggoner@maine.edu" },
+           { name="Owen Bellew", email="owen.bellew@maine.edu" },
+           { name="Darien Orethun", email="darien.orethun@maine.edu" },
+           { name="Wilder Baldwin", email="wilder.baldwin@maine.edu" },
 ]
-description = "An exercise in the capstone course"
+description = "An exercise in our capstone course to practice creating project packages"
 readme = "README.md"
 requires-python = ">=3.9.0"
 classifiers = [

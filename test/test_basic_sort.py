@@ -17,7 +17,7 @@
 # =========================================================================
 import pytest
 import numpy as np
-from basic_sort_UNIQUE_SUFFIX.int_sort import bubble, quick, insertion
+from basic_sort_3977.int_sort import bubble, quick, insertion
 
 
 def is_sorted(int_list):
@@ -29,7 +29,10 @@ def is_sorted(int_list):
 
 @pytest.fixture
 def int_lists():
-    # Fixture that creates testing data for all tests
+    '''
+    List of lists to run as pytest fixtures, testing the sorting algorithms we 
+    designed
+    '''
     return [
         # Sorted list
         [1, 2, 3],
@@ -67,6 +70,9 @@ def int_lists():
 
     ]
 
+'''
+For each sorting algorithm we will test all of the pytest fixtures
+'''
 # Test the bubble sort algorithm
 def test_bubble(int_lists):
     for example in int_lists:
