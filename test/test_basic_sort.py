@@ -73,7 +73,7 @@ def test_bubble(int_lists):
             sorted_list = bubble(example.copy())
             assert is_sorted(sorted_list)
         except Exception:
-            assert isinstance(example, list) == False or all(isinstance(i, int) for i in example) == False
+            assert not isinstance(example, list) or not all(isinstance(i, int) for i in example)
 
 
 def test_quick(int_lists):
@@ -82,7 +82,7 @@ def test_quick(int_lists):
             sorted_list = quick(example.copy())
             assert is_sorted(sorted_list)
         except Exception:
-            assert isinstance(example, list) == False or all(isinstance(i, int) for i in example) == False
+            assert not isinstance(example, list) or not all(isinstance(i, int) for i in example)
 
 
 def test_insertion(int_lists):
@@ -91,4 +91,4 @@ def test_insertion(int_lists):
             sorted_list = insertion(example.copy())
             assert is_sorted(sorted_list)
         except Exception:
-            assert isinstance(example, list) == False or all(isinstance(i, int) for i in example) == False
+            assert not isinstance(example, list) or not all(isinstance(i, int) for i in example)
