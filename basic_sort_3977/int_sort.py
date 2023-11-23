@@ -19,7 +19,7 @@
 """This module sorts lists of integers in ascending order.
 
 Three algorithms are available, including bubble sort, quick sort and insertion
-sort. There are no exported classes or libraries that are used. Sorting 
+sort. There are no exported classes or libraries that are used. Sorting
 algorithms were created following the methods of the following sources:
 Bubble sort: https://www.geeksforgeeks.org/bubble-sort/
 Quick sort: https://www.youtube.com/watch?v=Hoixgm4-P4M
@@ -32,7 +32,6 @@ Typical usage example (for any of the three implementations):
 
     sorted_list = bubble(unsorted_list)
 """
-
 
 def bubble(int_list):
     """
@@ -53,7 +52,7 @@ def bubble(int_list):
 
     # We make a maximum of n-1 passes, where each pass goes through the entire
     # list. At each index, we swap the element and the next if they are out of
-    # order. If no swaps were made after a pass, we return immediately. 
+    # order. If no swaps were made after a pass, we return immediately.
 
     for pass_num in range(len(int_list) - 1):
         swap_was_made = False
@@ -85,7 +84,7 @@ def quick(int_list):
     if any(not isinstance(ele, int) for ele in int_list):
         raise TypeError("Input contains non-integer values.")
 
-    if len(int_list) == 1 or len(int_list) == 0: # This is the base case.
+    if len(int_list) == 1 or len(int_list) == 0:  # This is the base case.
         return int_list
 
     # During each call of this recursive function, we choose a pivot and swap
@@ -103,15 +102,15 @@ def quick(int_list):
 
     while True:
         left_idx = "pivot is largest"
-        for left in range(len(int_list) - 1): # Find the leftmost element that
-                                              # is larger than pivot.
+        for left in range(len(int_list) - 1):  # Find the leftmost element that
+                                               # is larger than pivot.
             if int_list[left] > pivot:
                 left_idx = left
                 break
         
         right_idx = "pivot is smallest" 
-        for r in range(len(int_list) - 2, -1, -1): # Find the rightmost element
-                                                   # that is smaller than pivot.
+        for r in range(len(int_list) - 2, -1, -1):  # Find the rightmost element
+                                                    # that is smaller than pivot.
             if int_list[r] < pivot:
                 right_idx = r
                 break
@@ -122,7 +121,7 @@ def quick(int_list):
             return [pivot] + quick(int_list[:-1])
 
         
-        if right_idx < left_idx: # We know the pivot's location in the final array.
+        if right_idx < left_idx:  # We know the pivot's location in the final array.
             return quick(int_list[: right_idx + 1]) + [pivot] + quick(int_list[left_idx:-1])
 
         temp = int_list[right_idx]
