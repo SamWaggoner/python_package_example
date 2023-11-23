@@ -1,18 +1,26 @@
+# Creating a Python Module Using DevOps
+
 [![Sort Lib](https://github.com/SamWaggoner/python_package_example/actions/workflows/main.yml/badge.svg)](https://github.com/SamWaggoner/python_package_example/actions/workflows/main.yml)
 
+## Overview
 This repository is designed to reflect the requirements proposed in assignment 6. It will reflect learning a DevOps workflow that will be described here.
 
+## Pre-Commit File
 A set of hooks has been specified with a .yml file added. This is known as a pre-commit as it triggers before a commit is made. Pre-commits are run locally before each commmit so it can catch errors faster and prevent them from being committed.
 In this case the pre-commit ensures files commited are below a certain size, that the black and flake8 linters run and detects AWS credential prviate keys.
 Normally we would require flake8-black, an open-source linter plugin for validating python code for flake8, a style guide enforcement plugin. It allows flake8 to use black, a command line code formatting tool. Normally black would not be able to be run within flake8. However, we avoid the need for this plugin and achieve the same effect by using a precommit instead.
 Linters are important for ensuring clean code as they check for errors before they are commited. It is akin to removing mold from cheese before ingestion, it is altogether better to be removed before joining the main body.
 
+## Sorting and Docstrings
 This repository implements bubble, quick and inserstion sorting in python ensuring standard practices and is documented with the Google docstring style. This maximizes readability for any developer needing the coding.
 
+## Testing
 Pytest is implemented in this repository. Pytest is an open-source framework for creating small tests that can support complex fucntional testing for applications and libraries. Execution is easier with pytest as tests can be invoked quickly to return detailed information on fail.
 
+## Version Accomodation
 Additionally, the GitHub actions workflow has been altered to build to three diffferent operating systems: Windows, OSX and Linux for python versions 3.9 and 3.10. This was done using a build backend, in this case Twine. Twine can upload packages to the Python Pakcage index by passing program and metadata files to a web API. It is the official PyPI upload tool which means it can be relied on to be maintained, secure and reliable. Additionally, PyPI functionality has been added to enable Twine.
 
+## Summary
 These changes have been made to show the principles of DevOps, which ensure the project can be continued or expanded upon easily regardless of which developer or when the developer joins the project. Standard practices allow other developers to be able to work on existing code easily. Additionally, the use of a standardized docstring style helps with understanding the existing code. The implementation of modern linters allows for cleaner commits, which are critical for the long term heatlh of the project.
 
 
