@@ -9,6 +9,18 @@ on:
       - main
 
 jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+    - name: Install pre-commit
+      run: |
+        pip install pre-commit
+    - name: Run pre-commit
+      run: |
+        pre-commit run --all-files
+
   linting:
     runs-on: ubuntu-latest
     steps:
