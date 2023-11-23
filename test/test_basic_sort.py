@@ -26,6 +26,7 @@ def is_sorted(int_list):
     """
     return int_list == sorted(int_list)
 
+
 @pytest.fixture
 def int_lists():
     return [
@@ -41,10 +42,8 @@ def int_lists():
         [42],
         # Empty list
         [],
-
         # Random list generated using NumPy
         list(np.random.randint(low=-10, high=200, size=5)),
-
         # String input
         "hi I am a string!",
         # Single char input
@@ -56,15 +55,17 @@ def int_lists():
         # Mixed input
         [6, 2, "oop", 74],
         # 2D lists
-        [[8,5,2],[82,3]],
+        [[8, 5, 2], [82, 3]],
         # 2D empty lists
         [[]],
-        [[],[]]
+        [[], []],
     ]
+
 
 # Test each of the three implementations. If an exception is raised, ensure
 # that the test passes if either 1) the input is not a list, or 2) not every
 # element in that list is an integer.
+
 
 def test_bubble(int_lists):
     for example in int_lists:
@@ -74,6 +75,7 @@ def test_bubble(int_lists):
         except Exception:
             assert isinstance(example, list) == False or all(isinstance(i, int) for i in example) == False
 
+
 def test_quick(int_lists):
     for example in int_lists:
         try:
@@ -81,6 +83,7 @@ def test_quick(int_lists):
             assert is_sorted(sorted_list)
         except Exception:
             assert isinstance(example, list) == False or all(isinstance(i, int) for i in example) == False
+
 
 def test_insertion(int_lists):
     for example in int_lists:

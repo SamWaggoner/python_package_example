@@ -33,6 +33,7 @@ Typical usage example (for any of the three implementations):
     sorted_list = bubble(unsorted_list)
 """
 
+
 def bubble(int_list):
     """
     Sorts a list of integers in ascending order using the bubblesort algorithm.
@@ -90,7 +91,7 @@ def quick(int_list):
     # During each call of this recursive function, we choose a pivot and swap
     # that element with the last element. We then repeatedly find the leftmost
     # element that is larger than the pivot and the rightmost element that is
-    # smaller than the pivot, and swap them until the index of the leftmost 
+    # smaller than the pivot, and swap them until the index of the leftmost
     # element is greater than the index of the rightmost element.
 
     pivot_idx = -1
@@ -103,14 +104,14 @@ def quick(int_list):
     while True:
         left_idx = "pivot is largest"
         for left in range(len(int_list) - 1):  # Find the leftmost element that
-                                               # is larger than pivot.
+            # is larger than pivot.
             if int_list[left] > pivot:
                 left_idx = left
                 break
-        
-        right_idx = "pivot is smallest" 
+
+        right_idx = "pivot is smallest"
         for r in range(len(int_list) - 2, -1, -1):  # Find the rightmost element
-                                                    # that is smaller than pivot.
+            # that is smaller than pivot.
             if int_list[r] < pivot:
                 right_idx = r
                 break
@@ -120,7 +121,6 @@ def quick(int_list):
         elif right_idx == "pivot is smallest":
             return [pivot] + quick(int_list[:-1])
 
-        
         if right_idx < left_idx:  # We know the pivot's location in the final array.
             return quick(int_list[: right_idx + 1]) + [pivot] + quick(int_list[left_idx:-1])
 

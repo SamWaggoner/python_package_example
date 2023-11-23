@@ -35,7 +35,7 @@ jobs:
           pip install -r requirements-dev.txt
       - name: Lint with black
         run: |
-          python -m black --diff . # add --check to make Black exit with a non-zero status code if any files would be reformatted, but not actually make any changes
+          python -m black . # add --diff or --check to make Black exit with a non-zero status code if any files would be reformatted, but not actually make any changes
       - name: Lint with flake8
         run: |
           python -m flake8 . --show-source --statistics
