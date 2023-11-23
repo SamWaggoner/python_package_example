@@ -1,6 +1,7 @@
 # Creating a Python Module Using DevOps
 
 [![Sort Lib](https://github.com/SamWaggoner/python_package_example/actions/workflows/main.yml/badge.svg)](https://github.com/SamWaggoner/python_package_example/actions/workflows/main.yml)
+[![.github/workflows/.pre-commit-config.yaml](https://github.com/SamWaggoner/python_package_example/actions/workflows/.pre-commit-config.yaml/badge.svg)](https://github.com/SamWaggoner/python_package_example/actions/workflows/.pre-commit-config.yaml)
 
 ## Overview
 This repository is designed to reflect the requirements proposed in assignment 6. It will reflect learning a DevOps workflow that will be described here.
