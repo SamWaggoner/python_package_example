@@ -6,7 +6,7 @@ repos:
     -   id: detect-aws-credentials
         args: [--credentials-file=./.aws/credentials]
 -   repo: https://github.com/psf/black
-    rev: 21.9b0
+    rev: 22.3.0
     hooks:
     - id: black
       # language_version: python3.9  # do not include, since it works with multiple python versions
