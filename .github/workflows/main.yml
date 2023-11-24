@@ -114,4 +114,4 @@ jobs:
             pip install twine
         - name: Upload to TestPyPI
           run: |
-            python -m twine upload --repository-url https://test.pypi.org/legacy/ dist_${{ matrix.python-version }}_SEWDO"/*
+            python -m twine upload --repository-url https://test.pypi.org/legacy/ "dist_${{ matrix.python-version }}_SEWDO"/*
