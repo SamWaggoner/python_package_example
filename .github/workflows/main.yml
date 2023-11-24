@@ -86,7 +86,7 @@ jobs:
         run: |
           python -m build
           python -c "import shutil; shutil.move('dist', 'dist_${{ matrix.python-version }}_SEWDO')"
-          python -c "import os; print('\n--FILE LIST--'.join(os.listdir('dist_${{ matrix.python-version }}_SEWDO')))"
+          python -c "import os; print('--FILE LIST--\n' + '\n'.join(os.listdir('dist_${{ matrix.python-version }}_SEWDO')))"
       - name: Upload package
         if: github.event_name == 'push'
         uses: actions/upload-artifact@v3
