@@ -4,7 +4,7 @@ repos:
     hooks:
     -   id: check-added-large-files
     -   id: detect-aws-credentials
-        args: [--credentials-file=./.aws/credentials]
+        args: [--credentials-file=./.aws/credentials, --allow-missing-credentials]
 -   repo: https://github.com/psf/black
     rev: 22.3.0
     hooks:
