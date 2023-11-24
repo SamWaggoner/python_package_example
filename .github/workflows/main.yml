@@ -92,7 +92,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: python-packages
-          path: dist
+          path: dist_${{ matrix.python-version }}_SEWDO/*
 
   upload-to-testpypi:
       needs: packaging
