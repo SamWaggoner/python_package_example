@@ -69,5 +69,9 @@ Possible work division, three sub-teams:
 
 
 For testing of the sorting algorithms run: python -m pytest 
-For linting review of the code run python -m flake8 ; 
+
+For linting review of the code run python -m flake8 
+
 To automate linting cleanup with flake 8 and black python -m black .
+
+To upload to Pypi python -m twine upload --repository-url https://test.pypi.org/legacy/ dist\* 
